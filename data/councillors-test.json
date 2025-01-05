@@ -1,0 +1,22 @@
+{
+    "councillor": [
+        {
+            "first name": "Laurie",
+            "last name": "Carnie",
+            "council": "Aberdeenshire",
+            "ward": "Mearns"
+        },
+        {
+            "first name": "Mark",
+            "last name": "Findlater",
+            "council": "Aberdeenshire",
+            "ward": "Troup"
+        },
+        {
+            "first name": "Trevor",
+            "last name": "Bence",
+            "council": "Arun",
+            "ward": "Aldwick East"
+        }
+    ]
+}
