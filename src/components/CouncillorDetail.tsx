@@ -43,18 +43,18 @@ export const CouncillorDetail = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "basic_info":
-        return <Info className="h-4 w-4" />;
       case "business_interests":
         return <Briefcase className="h-4 w-4" />;
-      case "social_media":
-        return <Share2 className="h-4 w-4" />;
       case "controversy":
         return <AlertTriangle className="h-4 w-4" />;
       default:
         return null;
     }
   };
+
+  const filteredCategories = Object.entries(councillor.categories).filter(
+    ([category]) => !['basic_info', 'social_media'].includes(category)
+  );
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -82,10 +82,6 @@ export const CouncillorDetail = () => {
               <p className="text-2xl text-red-500">{councillor.summary.controversy_count}</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold">Social Media</h3>
-              <p className="text-2xl">{councillor.summary.has_social_media ? "Yes" : "No"}</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-semibold">Potential Interests</h3>
               <p className="text-2xl">{councillor.summary.potential_interests.length}</p>
             </div>
@@ -94,7 +90,7 @@ export const CouncillorDetail = () => {
       </Card>
 
       <Accordion type="single" collapsible className="space-y-4">
-        {Object.entries(councillor.categories).map(([category, results]) => (
+        {filteredCategories.map(([category, results]) => (
           <AccordionItem value={category} key={category}>
             <AccordionTrigger className="flex items-center gap-2">
               {getCategoryIcon(category)}
