@@ -88,6 +88,7 @@ export const CouncillorDetail = () => {
           </div>
         </CardContent>
       </Card>
+      
 
       <Accordion type="single" collapsible className="space-y-4">
         {filteredCategories.map(([category, results]) => (
