@@ -1,69 +1,106 @@
-# Welcome to your Lovable project
+# Councillor Insights Hub 🔍
 
-## Project info
+An automated OSINT tool for gathering and analyzing background information on Reform UK councillors and candidates. The system helps researchers efficiently discover relevant information about political figures, including their business interests, controversies, and social media presence.
 
-**URL**: https://lovable.dev/projects/7919e09a-e45d-40e3-bf53-06e9cd293397
+## 🎯 Purpose
 
-## How can I edit this code?
+This tool assists time-constrained researchers by:
+- Automating the discovery of public information about councillors
+- Identifying potential areas of interest or concern
+- Aggregating data from multiple sources into a searchable format
+- Highlighting opportunities for further manual investigation
 
-There are several ways of editing your application.
+## 🛠 Technical Stack
 
-**Use Lovable**
+- **Frontend**: React + TypeScript with ShadcnUI
+- **Backend**: Python
+  - LangChain for structured data processing
+  - Google Custom Search API for intelligent web searches
+  - Data caching and rate limiting
+- **Deployment**: Vercel
+- **Data Storage**: JSON + SQLite
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7919e09a-e45d-40e3-bf53-06e9cd293397) and start prompting.
+## 🔑 Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Automated Search Pipeline**
+  - Multi-stage search process
+  - Intelligent filtering of baseline results
+  - Category-based result organization
+  - Confidence scoring for matches
 
-**Use your preferred IDE**
+- **Information Categories**
+  - Business interests and directorships
+  - Controversies and complaints
+  - Social media presence
+  - Voting records
+  - Party affiliations and changes
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Research Tools**
+  - Relevance scoring
+  - Source validation
+  - Duplicate detection
+  - Data persistence
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+### Prerequisites
+- Python 3.8+
+- Node.js 16+
+- Google Custom Search API credentials
+- ScrapingBee API key (optional)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone https://github.com/Blue-Cardigan/councillor-insights-hub.git
+cd councillor-insights-hub
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+Backend
+pip install -r requirements.txt
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Frontend
+npm install
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+## 📊 Data Sources
 
-This project is built with .
+- Google Custom Search
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📝 Notes for Researchers
 
-## How can I deploy this project?
+### Automated vs Manual Research
+- **Automated**
+  - Initial data gathering
+  - Social media discovery
+  - News article collection
+  - Business interest identification
 
-Simply open [Lovable](https://lovable.dev/projects/7919e09a-e45d-40e3-bf53-06e9cd293397) and click on Share -> Publish.
+- **Manual Review Required**
+  - Verification of findings
+  - Context analysis
+  - Pattern identification
+  - Source credibility assessment
 
-## I want to use a custom domain - is that possible?
+### Research Opportunities
+- Cross-reference with local planning decisions
+- Monitor social media engagement patterns
+- Track voting consistency
+- Analyze business network connections
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 👥 Team
+
+- **Project Lead**: Jethro Reeve
+- **Development**: Heidi Swigon
+
+## 🔗 Links
+
+- [Live Demo](https://councillor-insights-hub.vercel.app)
